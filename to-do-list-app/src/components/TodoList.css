@@ -1,0 +1,101 @@
+h1{
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+.task-list{
+    gap: 10px;
+    border-collapse: collapse;
+    width: 300px;
+    margin-top: 20px;
+    padding: 15px;
+    margin-right: 20px;
+    font-size: 1.2em;
+    align-items: center;
+
+    
+}
+.task-item{
+    justify-content: space-between;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+}
+/*.task-cell{
+    padding: 0px;
+    text-align: left;
+}*/
+.status-indicator{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-right: 10px;
+    cursor: pointer;
+}
+button{
+    background-color: #B2EBF2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #B2EBF2;
+}
+
+.add-task-container{
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F8D3D6;
+}
+.add-task-container input[type="text"] {
+    flex: 1;
+    margin: 0 10 px;
+    padding: 10px;
+    font-size: 1.1em;
+}
+.add-task-container input[type="date"]{
+    flex: 1;
+    margin: 0 10 px;
+    height: 40px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
+.add-task-container button {
+    flex-shrink: 5;
+    padding: 10px 15px;
+    font-size: 1em;
+}
+.tasks-container{
+    gap: 20px;
+    width: 100%;
+    transition: transform 0.5s ease;
+    font-size: 1.2em;
+    margin-top: 0;
+   
+} 
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #F8D3D6;
+  }

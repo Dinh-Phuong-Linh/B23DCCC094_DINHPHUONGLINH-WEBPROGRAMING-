@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lí sinh viên</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Quản lí sinh viên</h1>
+            <form id="student-form">
+                <input type="hidden" id="student-id"/>
+                <div class="form-group">
+                    <lable for="student-code">Mã sinh viên</lable>
+                    <input type="text" id="student-code" required/>
+                </div>
+                <div class="form-group">
+                    <lable for="full -name">Họ và tên</lable>
+                    <input type="text" id="full-name" required/>
+                </div>
+                <div class="form-group">
+                    <lable for="gender">Giới tính </lable>
+                    <select id="gender">
+                        <option value="Nam">Nam</option>
+                        <option value="Nữ">Nữ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <lable for="birthdate">Ngày sinh</lable>
+                    <input type="date" id="birthdate" required/>
+                </div> 
+                <div class="form-group">
+                    <lable for="hometown">Quê quán</lable>
+                    <input type="text" id="hometown" required/>
+                </div>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+        <div class="table-container">
+            <table id="student-table">
+                <thead>
+                    <tr>
+                        <th>Mã sinh viên</th>
+                        <th>Họ tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Quê quán</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script scr="script.js"></script>
+</body>
+</html>

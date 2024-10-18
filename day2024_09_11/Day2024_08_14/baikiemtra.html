@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+<p>ptit</p>
+<p>ptit</p>
+<p>ptit</p>
+<button onclick="update()">update p</button>
+<script>
+    function update(){
+        const a = document.querySelectorAll("p");
+        a.forEach(function(b){
+            b.textContent ="i love ptit";
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Table</title>
+    <style>
+        table, td {
+            border: 1px solid rgb(12, 187, 236);
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+    </style> <div id="table-container"></div>
+</head>
+<body>
+    <div id="table-container"></div>
+
+    <script>
+        const table = document.createElement("table");
+        for (let i = 0; i < 3; i++) {
+            const row = document.createElement("tr");
+            for (let j = 0; j < 3; j++) {
+                const cell = document.createElement("td");
+                cell.textContent = `Row ${i + 1}, Cell ${j + 1}`; 
+                row.appendChild(cell); 
+            }
+            table.appendChild(row); 
+        }
+        document.getElementById("table-container").appendChild(table);
+    </script>
+</body>
+</html>

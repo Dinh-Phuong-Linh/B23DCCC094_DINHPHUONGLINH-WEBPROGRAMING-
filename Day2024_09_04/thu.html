@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Thông Tin Sinh Viên</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thông Tin Sinh Viên</h1>
+    <div id="table-container"></div>
+
+    <script>
+        // Dữ liệu sinh viên
+        const students = [
+            { id: "SV001", name: "Nguyễn Văn A", age: 20, class: "CNTT1" },
+            { id: "SV002", name: "Trần Thị B", age: 22, class: "CNTT2" },
+            { id: "SV003", name: "Lê Văn C", age: 21, class: "CNTT1" }
+        ];
+
+        // Tạo bảng
+        function createStudentTable(students) {
+            const table = document.createElement('table');
+
+            // Tạo header
+            const thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+            const headers = ["ID", "Tên", "Tuổi", "Lớp"];
+            headers.forEach(headerText => {
+                const th = document.createElement('th');
+                th.textContent = headerText;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            // Tạo body
+            const tbody = document.createElement('tbody');
+            students.forEach(student => {
+                const row = document.createElement('tr');
+                const cellId = document.createElement('td');
+                cellId.textContent = student.id;
+                row.appendChild(cellId);
+
+                const cellName = document.createElement('td');
+                cellName.textContent = student.name;
+                row.appendChild(cellName);
+
+                const cellAge = document.createElement('td');
+                cellAge.textContent = student.age;
+                row.appendChild(cellAge);
+
+                const cellClass = document.createElement('td');
+                cellClass.textContent = student.class;
+                row.appendChild(cellClass);
+
+                tbody.appendChild(row);
+            });
+            table.appendChild(tbody);
+
+            return table;
+        }
+
+        // Thêm bảng vào trang
+        const container = document.getElementById('table-container');
+        const table = createStudentTable(students);
+        container.appendChild(table);
+    </script>
+</body>
+</html>
