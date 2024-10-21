@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+<script>
+    class login{
+        constructor(){
+            this.correctUsername = 'Linh';
+            this.correctPassword = 'linh123';
+        }
+        login(username,password){
+            if(username === this.correctUsername && password === correctPassword){
+                localStorage.setItem('loggedIn','true');
+                window.location.href = 'index02.html';
+            } else{
+                alert("thong tin dang nhap sai ,vui long thu lai");
+            }
+        }
+    }
+    function alogin(event){
+        event.preventdeafault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const authManager = new login();
+        authManager.login(username,password);
+    }
+</script>
+</head>
+<body>
+    <h1>Dang nhap</h1>
+    <form onsubmit="alogin(event)">
+         <lable for="username">ten dang nhap:</lable>
+         <input type="text" id="username" required><br>
+         <lable for="password">ten dang nhap:</lable>
+         <input type="password" id="password" required><br>
+         <button type="submit">dang nhap</button>
+    </form>
+</body>
+</html>
