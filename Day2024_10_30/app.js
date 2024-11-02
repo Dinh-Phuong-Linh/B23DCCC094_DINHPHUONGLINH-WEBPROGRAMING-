@@ -1,14 +1,16 @@
 
 const express = require('express');
+const bodyParser = require('body-parser')
 const app = express();
-const todoRouter = require('./src/routers/todos');
-const port = 3000;
+const todoRoutes = require('./src/routes/todoRoutes');
+const port = 3001;
 
+app.use(bodyParser.json());
 app.use(express.json()); 
-app.use('/todos',todoRouter);
+app.use('/todos',todoRoutes);
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
   });
-  
+
 

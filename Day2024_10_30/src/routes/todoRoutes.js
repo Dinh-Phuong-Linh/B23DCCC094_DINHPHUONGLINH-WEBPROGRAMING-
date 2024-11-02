@@ -1,7 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../configs/database');
+const todoController = require('../controllers/todoController');
 
+router.get('/',todoController.getAllTodos);
+router.post('/todos', todoController.createTodo);
+router.put('/todos/:id',todoController.updateTodo);
+router.delete('/todos/:id',todoController.deleteTodo);
+
+module.exports = router;
+
+/*
 router.get('/',(req,res)=>{
     db.query('SELECT * FROM todos',(err,results)=>{
         if(err) return res.status(500).send(err);
@@ -32,5 +40,5 @@ router.delete('/:id', (req, res) => {
         if (err) return res.status(500).send(err);
         res.json({ message: 'Todo deleted successfully' });
     });
-});
+}); */
 module.exports = router;
